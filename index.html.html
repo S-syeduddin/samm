@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ISRO NASA Trip Exam – Nitrud</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0fbf4;--card:#fff;--line:#cfeedd;--text:#14352a;--muted:#5f7f72;--g1:#16a34a;--g2:#0d9488;--ac:#f59e0b;--soft:#e8f8ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a14;--card:#12261d;--line:#21443465;--text:#e3f6ec;--muted:#8fb5a2;--soft:#173226}}
+:root[data-theme="dark"]{--bg:#0b1a14;--card:#12261d;--line:#21443465;--text:#e3f6ec;--muted:#8fb5a2;--soft:#173226}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Nunito",system-ui,sans-serif;background-image:radial-gradient(circle at 10% 0,rgba(22,163,74,.12),transparent 35%),radial-gradient(circle at 100% 30%,rgba(13,148,136,.12),transparent 35%)}
+.wrap{max-width:900px;margin:0 auto;padding:18px 14px 40px}
+.head{background:var(--card);border:2px solid var(--line);border-radius:28px;overflow:hidden;text-align:center;box-shadow:0 10px 28px rgba(22,163,74,.12)}
+.strip{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;padding:10px;font-weight:800;letter-spacing:.5px}
+.inner{padding:22px 18px 26px}
+.logo{width:84px;height:84px;margin:0 auto 10px;border-radius:50%;background:linear-gradient(135deg,#bbf7d0,#99f6e4);display:grid;place-items:center;font-size:44px;box-shadow:0 6px 16px rgba(13,148,136,.3)}
+h1{margin:0 0 6px;font-size:clamp(24px,5vw,38px);font-weight:900;color:var(--g1);line-height:1.25}
+.sub{font-size:clamp(19px,3.5vw,26px);font-weight:800;color:var(--g2);margin:0}
+.tag{display:inline-block;margin-top:14px;padding:6px 20px;border-radius:999px;background:var(--ac);color:#3b2400;font-weight:900}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.tile{border-radius:22px;padding:16px;color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.tile .e{font-size:28px}.tile b{display:block;font-size:13px;opacity:.9;margin-top:4px}.tile span{font-size:18px;font-weight:800}
+.t1{background:linear-gradient(135deg,#16a34a,#4ade80)}.t2{background:linear-gradient(135deg,#0d9488,#2dd4bf)}.t3{background:linear-gradient(135deg,#d97706,#fbbf24)}.t4{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:20px;margin-bottom:18px}
+.panel h3{margin:0 0 14px;font-size:22px;font-weight:900;color:var(--g2)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{padding:6px 14px;border-radius:12px;background:var(--soft);border:1.5px solid var(--g1);color:var(--text);font-weight:700;font-size:14.5px}
+.chip:before{content:"🌿 ";font-size:12px}
+label{display:block;font-weight:800;font-size:17px;margin:14px 0 7px}
+input,select{width:100%;padding:14px 16px;font:inherit;font-weight:600;font-size:17px;color:var(--text);background:var(--soft);border:2px solid var(--line);border-radius:14px}
+input:focus,select:focus{outline:none;border-color:var(--g1);box-shadow:0 0 0 4px rgba(22,163,74,.2)}
+button{width:100%;margin-top:24px;padding:17px;font:inherit;font-weight:900;font-size:21px;color:#fff;border:0;border-radius:16px;cursor:pointer;background:linear-gradient(90deg,var(--g1),var(--g2));box-shadow:0 8px 20px rgba(13,148,136,.4);transition:.2s}
+button:hover{transform:translateY(-2px)}
+.msg{margin-top:14px;padding:13px 15px;border-radius:12px;font-weight:700;display:none}
+.msg.err{display:block;background:#fee2e2;color:#991b1b}.msg.ok{display:block;background:#dcfce7;color:#166534}
+.foot{text-align:center;color:var(--muted);font-weight:700}
+@media(max-width:560px){.tiles{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="head"><div class="strip">🏫 EDUCATION DEPARTMENT</div>
+<div class="inner"><div class="logo">🚀</div>
+<h1>Panchayat Samiti Education Department, Nitrud</h1>
+<p class="sub">ISRO NASA Trip Exam</p><span class="tag">🌱 Practice Test</span></div></div>
+
+<div class="tiles">
+<div class="tile t1"><div class="e">📅</div><b>Date</b><span id="date"></span></div>
+<div class="tile t2"><div class="e">📝</div><b>Total Questions</b><span>50 • Total Marks 50</span></div>
+<div class="tile t3"><div class="e">🧬</div><b>Unit</b><span>Living World &amp; Biology</span></div>
+<div class="tile t4"><div class="e">🏆</div><b>Level</b><span>Medium to Hard • Competitive Pattern</span></div>
+</div>
+
+<div class="panel"><h3>📚 Topics Covered</h3><div class="chips" id="chips"></div></div>
+
+<div class="panel"><h3>🧑‍🎓 Student Information</h3>
+<label for="name">Student's Full Name</label>
+<input id="name" type="text" autocomplete="off" placeholder="Enter your name">
+<label for="cls">Class</label>
+<select id="cls"><option value="">Select class</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option></select>
+<button id="start">🚀 Start Test</button><div id="msg" class="msg"></div></div>
+<div class="foot">Nitrud • Best of luck! 🌟</div></div>
+<script>
+var topics=["Living & Non-living","Plant Structure","Plant Life Processes","Photosynthesis","Plant Reproduction","Animals & Classification","Human Body","Digestive System","Respiratory System","Blood Circulation","Excretion","Bones & Muscles","Sense Organs","Microorganisms","Diseases & Prevention","Food Chain","Ecosystem","Biodiversity","Environmental Balance"];
+document.getElementById("chips").innerHTML=topics.map(function(t){return '<span class="chip">'+t.replace("&","&amp;")+'</span>'}).join("");
+var d=new Date();document.getElementById("date").textContent=("0"+d.getDate()).slice(-2)+"/"+("0"+(d.getMonth()+1)).slice(-2)+"/"+d.getFullYear();
+document.getElementById("start").onclick=function(){var n=document.getElementById("name").value.trim(),c=document.getElementById("cls").value,m=document.getElementById("msg");
+if(!n||!c){m.className="msg err";m.textContent="Please enter the student's name and select a class.";return;}
+m.className="msg ok";m.textContent="Best of luck, "+n+" ("+c+")! The test will begin shortly.";};
+</script></body></html>
